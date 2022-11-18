@@ -12,7 +12,7 @@ jobs:
       run: |
          sudo cat /etc/apt/sources.list \
          && sudo ls /etc/apt/sources.list | xargs sed -i "s/# //g" \
-         sudo cat /etc/apt/sources.list \
+         && sudo cat /etc/apt/sources.list \
      
          
     - name: Install Dependencies
