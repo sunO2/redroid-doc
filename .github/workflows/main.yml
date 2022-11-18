@@ -11,7 +11,7 @@ jobs:
     - name: set apt source list
       run: |
          sudo cat /etc/apt/sources.list \
-         && sudo ls /etc/apt/sources.list | sudo xargs sed -i "s/# //g" \
+         && sudo ls /etc/apt/sources.list | sudo xargs sed -i "s/# deb-src/deb-src/g" \
          && sudo cat /etc/apt/sources.list \
      
          
