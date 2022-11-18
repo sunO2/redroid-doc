@@ -10,9 +10,8 @@ jobs:
 
     - name: set apt source list
       run: |
-         sudo cat /etc/apt/sources.list \
-         && sudo ls /etc/apt/sources.list | sudo xargs sed -i "s/# deb-src/deb-src/g" \
-         && sudo cat /etc/apt/sources.list \
+         sudo sed -i "s@http://azure.archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list \
+         && sudo sed -i "s@http://azure.archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
      
          
     - name: Install Dependencies
