@@ -10,9 +10,7 @@ jobs:
 
     - name: set apt source list
       run: |
-         sudo sed -i "s@http://azure.archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list \
-         && sudo sed -i "s@http://azure.archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
-     
+         sudo cat /etc/apt/sources.list
          
     - name: Install Dependencies
       run: sudo apt-get update && sudo apt-get install -y git-core gnupg flex bison build-essential zip curl zlib1g-dev \
