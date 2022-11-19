@@ -18,5 +18,5 @@ jobs:
       
     - name: set Env
       run: |
-        HOME=/home/$username && USER=$username && PATH=/src/.repo/repo:/src/prebuilts/jdk/jdk8/linux-x86/bin/:$PATH && where java
+        HOME=/home/$username && USER=$username && PATH=/src/.repo/repo:/src/prebuilts/jdk/jdk8/linux-x86/bin/:$PATH
          
