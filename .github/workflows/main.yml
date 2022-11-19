@@ -18,7 +18,7 @@ jobs:
       
     - name: set Env
       run: |
-        curl https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/git-repo/repo-1.19 > /home/runner/.local/bin/repo && HOME=/home/$username && USER=$username && PATH=/src/prebuilts/jdk/jdk8/linux-x86/bin/:$PATH && echo $PATH
+        sudo mkdir -p /home/runner/.local/bin && sudo curl https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/git-repo/repo-1.19 > /home/runner/.local/bin/repo && HOME=/home/$username && USER=$username && PATH=/src/prebuilts/jdk/jdk8/linux-x86/bin/:$PATH && echo $PATH
     - name: download source code
       run: |
          mkdir -p ~/redroid-source/12.0.0 && cd ~/redroid-source/12.0.0 && repo init -u https://github.com/remote-android/platform_manifests.git -b redroid-12.0.0 --depth=1 && repo sync -c
