@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
 
+    - name: show Env
+      run: |
+         sudo uname -a
+         
     - name: set apt source list
       run: |
          sudo cat /etc/apt/sources.list && sudo apt-get upgrade
